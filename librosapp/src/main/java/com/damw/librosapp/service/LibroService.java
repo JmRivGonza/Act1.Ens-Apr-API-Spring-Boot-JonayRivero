@@ -15,22 +15,22 @@ public class LibroService {
         this.libroRepository = libroRepository;
     }
 
-    // Obtener todos los usuarios
+    // Obtener todos los libros
     public List<Libro> listAll() {
         return libroRepository.findAll();
     }
 
-    // Obtener un usuario por ID
+    // Obtener un libro por ID
     public Optional<Libro> findById(Long id) {
         return libroRepository.findById(id);
     }
 
-    // Crear un nuevo usuario
+    // Crear un nuevo libro
     public Libro save(Libro libro) {
         return libroRepository.save(libro);
     }
 
-    // Actualizar un usuario existente
+    // Actualizar un libro existente
     public Optional<Libro> update(Long id, Libro datos) {
         return libroRepository.findById(id).map(libro -> {
             libro.setTitulo(datos.getTitulo());
@@ -42,7 +42,7 @@ public class LibroService {
         });
     }
 
-    // Eliminar un usuario por ID
+    // Eliminar un libro por ID
     public void delete(Long id) {
         libroRepository.deleteById(id);
     }
