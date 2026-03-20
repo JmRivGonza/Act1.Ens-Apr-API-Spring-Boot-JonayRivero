@@ -11,7 +11,6 @@ public class LibroService {
 
     private final LibroRepository libroRepository;
 
-    // Inyección por constructor (forma recomendada)
     public LibroService(LibroRepository libroRepository) {
         this.libroRepository = libroRepository;
     }
